@@ -2,7 +2,6 @@ with open('C:\Users\I849326\Desktop\AdventOfCode\day18\input.txt', 'r') as input
     input = inputFile.read().split('\n')
 
     variables = {}
-    functions = {}
     sound = 0
     pos = 0
    

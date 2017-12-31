@@ -1,4 +1,4 @@
-class Stack :
+class Stack:
     def __init__(self) :
         self.items = []
 
@@ -8,10 +8,7 @@ class Stack :
     def pop(self) :
         return self.items.pop()
 
-    def isEmpty(self) :
-        return (self.items == [])
-
-class Bridge():
+class Bridge:
     def __init__(self,input):
         self.input = input
         self.stack = Stack()

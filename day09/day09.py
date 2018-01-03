@@ -16,9 +16,7 @@ class Stack :
     def getCount(self):
         return self.count
 
-
-
-with open('/Users/juliorenner/Documents/git/adventOfCode_2017/day9/input.txt', 'r') as inputFile:
+with open('./input.txt', 'r') as inputFile:
     input = inputFile.read().split('\n')
 
     stack = Stack()

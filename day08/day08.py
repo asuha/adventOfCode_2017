@@ -1,4 +1,4 @@
-with open('/Users/juliorenner/Documents/git/adventOfCode_2017/day8/input.txt', 'r') as inputFile:
+with open('./input.txt', 'r') as inputFile:
     input = inputFile.read().split('\n')
 
     hashValues = {}
@@ -27,5 +27,3 @@ with open('/Users/juliorenner/Documents/git/adventOfCode_2017/day8/input.txt', '
 
     print("Parte 1: " + str(max(hashValues.values())))
     print("Parte 2: " + str(highestValue))
-
-        

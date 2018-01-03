@@ -16,9 +16,7 @@ class Node:
         for children in self.childrens:
             self.totalWeight += children.totalWeight
 
-
-
-with open('/Users/juliorenner/Documents/git/adventOfCode_2017/day7/input.txt', 'r') as inputFile:
+with open('./input.txt', 'r') as inputFile:
     input = inputFile.read()
 
     inputHash = input.split('\n')
@@ -109,9 +107,3 @@ with open('/Users/juliorenner/Documents/git/adventOfCode_2017/day7/input.txt', '
         
     print(parte1(inputHash))
     #parte2 done via debug
-
-
-
-
-
-

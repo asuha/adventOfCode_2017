@@ -1,7 +1,7 @@
-with open('/Users/juliorenner/Documents/git/adventOfCode_2017/day10/input.txt', 'r') as inputFile:
+with open('./input.txt', 'r') as inputFile:
     input = inputFile.read()
 
-    def part1(input, lastRoundInfo):
+    def parte1(input, lastRoundInfo):
         def createRoundList(listLenght):
             roundList = []
             currentIndex = 0
@@ -66,19 +66,21 @@ with open('/Users/juliorenner/Documents/git/adventOfCode_2017/day10/input.txt', 
 
             return hashToReturn
 
-        if lastRoundInfo['list'] == None:
+        if lastRoundInfo == None:
             roundList = createRoundList(256)
+            hashToReturn = orderRoundList(input, roundList, None, None)
+            return roundList[0]*roundList[1]
         else:
-            roundList = lastRoundInfo['list']
+            if lastRoundInfo['list'] == None:            
+                roundList = createRoundList(256)
+            else:
+                roundList = lastRoundInfo['list']
+            
+            hashToReturn = orderRoundList(input, roundList, lastRoundInfo['currentPos'], lastRoundInfo['skipSize'])
+            hashToReturn['list'] = roundList
+            return hashToReturn
 
-        hashToReturn = orderRoundList(input, roundList, lastRoundInfo['currentPos'], lastRoundInfo['skipSize'])
-        #print('Multiplying the first 2 values: ',(roundList[0]*roundList[1]))
-
-        hashToReturn['list'] = roundList
-
-        return hashToReturn
-
-    def part2(input):
+    def parte2(input):
         inputAscii = [ord(c) for c in input]
         newInput = ','.join(str(e) for e in inputAscii) + ',17,31,73,47,23'
         newInput = newInput.split(',')
@@ -91,7 +93,7 @@ with open('/Users/juliorenner/Documents/git/adventOfCode_2017/day10/input.txt', 
 
         count = 64
         while count > 0:
-            lastRoundInfo = part1(newInput, lastRoundInfo)
+            lastRoundInfo = parte1(newInput, lastRoundInfo)
 
             count -= 1
 
@@ -119,11 +121,11 @@ with open('/Users/juliorenner/Documents/git/adventOfCode_2017/day10/input.txt', 
 
         hashResult = ''.join(str(e) for e in hexArray)
 
-        print(hashResult)
+        return hashResult
 
-    part1(input.split(','), None)
+    print "Parte 1: " + str(parte1(input.split(','), None))
 
-    part2(input)
+    print "Parte 2: " + str(parte2(input))
 
     
 

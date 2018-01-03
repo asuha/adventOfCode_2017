@@ -1,4 +1,4 @@
-with open('/Users/juliorenner/Documents/git/adventOfCode_2017/day12/input.txt', 'r') as inputFile:
+with open('./input.txt', 'r') as inputFile:
     input = inputFile.read().split('\n')
 
     def find_dependencies(key, groups):
@@ -20,13 +20,16 @@ with open('/Users/juliorenner/Documents/git/adventOfCode_2017/day12/input.txt', 
     allKeys = set()
     for v in input:
         allKeys.add(int(v.split(' <-> ')[0]))
-    
-    count = 0
+
+    count_groups = 0
     while len(allKeys) > 0:
         key = allKeys.pop()
         group = find_dependencies(key, set())
         
         if len(group) > 0:
-            count += 1
+            count_groups += 1
 
         allKeys = allKeys - group
+
+    print "Parte 1: " + str(len(find_dependencies(0, set())))
+    print "Parte 2: " + str(count_groups)

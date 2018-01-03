@@ -1,9 +1,5 @@
-with open('/Users/juliorenner/Documents/git/adventOfCode_2017/day2/input.txt', 'r') as inputFile:
+with open('./input.txt', 'r') as inputFile:
     input = inputFile.read()
-
-    # input = [[5, 1, 9, 5],
-    #          [7, 5, 3],
-    #          [2, 4, 6, 8]]
 
     def parse_string_in_matriz (matrix_stringfy):
         lines = input.split('\n')
@@ -15,8 +11,6 @@ with open('/Users/juliorenner/Documents/git/adventOfCode_2017/day2/input.txt', '
 
         return matriz
             
-
-
     def soma_maior_menor (array):
         a = int(array[0])
         b = int(array[0])
@@ -39,7 +33,6 @@ with open('/Users/juliorenner/Documents/git/adventOfCode_2017/day2/input.txt', '
                     if v % v1 == 0:
                         return v / v1 
 
-
     inputMatriz = parse_string_in_matriz(input)
 
     checksum = 0
@@ -51,6 +44,3 @@ with open('/Users/juliorenner/Documents/git/adventOfCode_2017/day2/input.txt', '
 
     print('Parte 1: ' + str(checksum))
     print('Parte 2: ' + str(int(evenDivision)))
-
-
-

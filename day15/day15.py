@@ -1,47 +1,3 @@
-# def check_binaries(bin_a, bin_b):
-#     count = 1
-#     for p in range(len(bin_a)-1, 16, -1):
-#         if p >= len(bin_b):
-#             return False
-
-#         if int(bin_a[p]) == int(bin_b[p]):
-#             count += 1
-#         else:
-#             count = 1
-        
-#         if count == 15:
-#             return True
-    
-#     return False
-
-# gen_a = 16807
-# gen_b = 48271
-# divider = 2147483647
-# A = remainder_A = 65
-# B = remainder_B = 8921
-
-# count = match = 0
-
-# while count < 40000000:
-#     count += 1
-    
-#     A = (remainder_A * gen_a)
-#     B = (remainder_B * gen_b)
-
-#     remainder_A = A % divider
-#     remainder_B = B % divider
-
-#     bin_a = bin(remainder_A)[2:].zfill(32)
-#     bin_b = bin(remainder_B)[2:].zfill(32)
-
-#     if bitway_comparition(bin_a, bin_b):
-#         match += 1 
-    
-#     if count % 10000 == 0:
-#         print(count)
-
-#######################
-
 gen_a = 16807
 gen_b = 48271
 divider = 2147483647
@@ -110,5 +66,6 @@ def parte2(gen_a, gen_b, divider, A, B):
                     match += 1
     return match
     
-#print('Parte 1: ' + str(parte1(gen_a, gen_b, divider, A, B)))
+print 'Parte 1: ' + str(parte1(gen_a, gen_b, divider, A, B))
+## Takes a life time
 print('Parte 2: ' + str(parte2(gen_a, gen_b, divider, A, B)))

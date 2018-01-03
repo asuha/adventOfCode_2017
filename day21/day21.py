@@ -96,7 +96,7 @@ class Matrix:
 
 import numpy as np
 import re
-with open('/Users/juliorenner/Documents/git/adventOfCode_2017/day21/input.txt', 'r') as inputFile:
+with open('./input.txt', 'r') as inputFile:
     input = inputFile.read().split('\n')
 
     rules = [None]* len(input)

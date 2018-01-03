@@ -1,7 +1,5 @@
-with open('/Users/juliorenner/Documents/git/adventOfCode_2017/day5//input.txt', 'r') as inputFile:
+with open('./input.txt', 'r') as inputFile:
     input = inputFile.read()
-
-    # list = [0, 3,0, 1, -3]
 
     def parte1(): 
         inputList = input.split("\n")

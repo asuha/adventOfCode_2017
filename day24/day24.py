@@ -70,7 +70,7 @@ class Bridge:
         self.calculate_info()
 
 import re
-with open('/Users/juliorenner/Documents/git/adventOfCode_2017/day24/input.txt', 'r') as inputFile:
+with open('./input.txt', 'r') as inputFile:
     input = inputFile.read().split('\n')
     input = str.join(',,', input)
 

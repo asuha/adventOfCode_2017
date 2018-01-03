@@ -35,10 +35,7 @@ def parte2():
         count += 1
         if bitway_comparition(GA.next(), GB.next()):
             match += 1
-        
-        if count % 10000 == 0:
-            print count
+            
     return match
 
-print(parte2())
-
+print "Parte 2: " + str(parte2())

@@ -1,6 +1,6 @@
 import re
 
-with open('/Users/juliorenner/Documents/git/adventOfCode_2017/day20/input.txt', 'r') as inputFile:
+with open('./input.txt', 'r') as inputFile:
     input = inputFile.read().split('\n')
 
     p = list()

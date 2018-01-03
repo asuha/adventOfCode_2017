@@ -69,7 +69,8 @@ class Program(threading.Thread):
                 self.condition.acquire()
                 self.channel.append({'id': self.program_id, 'message': self.variables[line[1]]})
                 self.send_count += 1
-                print("Program " + str(self.program_id) + " sent " + str(self.send_count) + " messages")
+                if self.program_id == 1:
+                    print("Program " + str(self.program_id) + " sent " + str(self.send_count) + " messages")
                 self.condition.notify()
                 self.condition.release()
        
@@ -79,7 +80,7 @@ class Program(threading.Thread):
                     pos += p2 - 1
 
 
-with open('/Users/juliorenner/Documents/git/adventOfCode_2017/day18/input.txt', 'r') as inputFile:
+with open('./input.txt', 'r') as inputFile:
     input = inputFile.read().split('\n')
 
     channel = []

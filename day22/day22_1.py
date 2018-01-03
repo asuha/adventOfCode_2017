@@ -50,7 +50,7 @@ class Virus():
         self._move()
 
 
-with open('/Users/juliorenner/Documents/git/adventOfCode_2017/day22/input.txt', 'r') as inputFile:
+with open('./input.txt', 'r') as inputFile:
     input = inputFile.read().split('\n')
     
     for i, v in enumerate(input):

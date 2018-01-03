@@ -1,4 +1,4 @@
-with open('/Users/juliorenner/Documents/git/adventOfCode_2017/day13/input.txt', 'r') as inputFile:
+with open('./input.txt', 'r') as inputFile:
     input = inputFile.read().split('\n')
 
     class Node :
@@ -38,26 +38,24 @@ with open('/Users/juliorenner/Documents/git/adventOfCode_2017/day13/input.txt', 
     
         return myHash
 
-    # def run_Firewall(myHash):
-    #     caught = []
-    #     count = 0
-    #     while count <= max(myHash):
-    #         if count in myHash.keys():
-    #             if myHash[count].isCaught():
-    #                 caught.append(count)
+    def parte1(myHash):
+        caught = []
+        count = 0
+        while count <= max(myHash):
+            if count in myHash.keys():
+                if myHash[count].isCaught():
+                    caught.append(count)
 
-    #         for i in myHash:
-    #             myHash[i].moveOne()
+            for i in myHash:
+                myHash[i].moveOne()
 
-    #         count += 1
+            count += 1
         
-    #     severity = 0
-    #     for i in caught:
-    #         severity += i * myHash[i].lenght
+        severity = 0
+        for i in caught:
+            severity += i * myHash[i].lenght
         
-    #     print('Caught: ', caught)
-    #     print('Severity: ', severity)
-    #     return caught
+        return severity
 
     def run_Firewall(myHash, delay):
         caught = []
@@ -80,12 +78,8 @@ with open('/Users/juliorenner/Documents/git/adventOfCode_2017/day13/input.txt', 
 
         return caught
 
-    
-
+    delay = 3800000
     myHash = create_Hash()
-    # run_Firewall(myHash, 0)
-
-    delay = 10
     while True:
 
         for i in myHash:
@@ -93,9 +87,9 @@ with open('/Users/juliorenner/Documents/git/adventOfCode_2017/day13/input.txt', 
 
         run = run_Firewall(myHash, delay)
         if len(run) == 0:
-            print('Delay: ', delay)
             break
 
         delay += 1
-
-
+    
+    print "Parte 1: " + str(parte1(create_Hash))
+    print "Parte 2: " + str(delay)

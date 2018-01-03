@@ -1,6 +1,5 @@
-with open('/Users/juliorenner/Documents/git/adventOfCode_2017/day1/input.txt', 'r') as inputFile:
+with open('./input.txt', 'r') as inputFile:
     input = inputFile.read()
-
 
     def part1():
         new_input = input[len(input) - 1] + input
@@ -27,5 +26,3 @@ with open('/Users/juliorenner/Documents/git/adventOfCode_2017/day1/input.txt', '
 
     part1()
     part2()
-
-

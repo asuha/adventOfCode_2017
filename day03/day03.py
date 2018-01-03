@@ -80,4 +80,3 @@ matrixLenght = int(round(math.sqrt(input)) + 1)
 
 print("Parte 1: " + str(parte1(matrixLenght)))
 print("Parte 2: " + str(parte2(matrixLenght)))
-

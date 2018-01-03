@@ -1,4 +1,4 @@
-with open('/Users/juliorenner/Documents/git/adventOfCode_2017/day4//input.txt', 'r') as inputFile:
+with open('./input.txt', 'r') as inputFile:
 
     input = inputFile.read()
 

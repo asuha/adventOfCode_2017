@@ -1,4 +1,4 @@
-with open('C:\Users\I849326\Desktop\AdventOfCode\day18\input.txt', 'r') as inputFile:
+with open('./input.txt', 'r') as inputFile:
     input = inputFile.read().split('\n')
 
     variables = {}

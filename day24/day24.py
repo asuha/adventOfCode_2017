@@ -55,7 +55,7 @@ class Bridge:
         return int(filter(None, regex.match(cur_value).groups())[0])
         
 
-    def check_lenght(self, value):
+    def check_length(self, value):
         values = self.get_values(value)
 
         for cur_v in values:
@@ -63,7 +63,7 @@ class Bridge:
                 continue
 
             self.stack.push(cur_v)
-            self.check_lenght(self.get_next_value(value, cur_v))
+            self.check_length(self.get_next_value(value, cur_v))
 
             self.stack.pop()
         
@@ -76,7 +76,7 @@ with open('./input.txt', 'r') as inputFile:
 
     bridge = Bridge(input)
 
-    bridge.check_lenght(0)
+    bridge.check_length(0)
 
     print("Parte 1: " + str(bridge.max_strength))
     print("Parte 2: " + str(bridge.max_length_strength))
